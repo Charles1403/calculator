@@ -1,7 +1,7 @@
 import { Box, Flex, Input } from '@chakra-ui/react';
 import {useState} from 'react'
 import Data from './data';
-import Keypad from './components/Keypad';
+import Keys from './components/Keys';
 
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
      <Flex flexWrap='wrap' w='100%' justifyContent='center'>
        <Input size='lg' p={8} m={5} borderColor='blue' textAlign='right' value={result}/>
       {Data.map((i, index) => 
-      <Keypad key={index} name={i.name} width={i.width} text={i.text} setResult={setResult} result={result}/>
+      <Keys key={index} name={i.name} width={i.width} text={i.text} setResult={setResult} result={result}/>
       )}
      </Flex>
     </Box>
